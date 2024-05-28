@@ -6,14 +6,14 @@ const mainRouter = require("./routes/index");
 const cors = require("cors");
 require("dotenv").config();
 
-// app.use(cors());
+app.use(cors());
 app.use(express.json());
-app.use(
-    cors({
-        origin: "https://payment-wallet-kv.vercel.app",
-        credentials: true,
-    })
-);
+// app.use(
+//     cors({
+//         origin: "https://payment-wallet-kv.vercel.app",
+//         credentials: true,
+//     })
+// );
 
 dbConnect();
 
